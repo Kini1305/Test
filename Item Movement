@@ -1,0 +1,30 @@
+def main():
+    bird = Bird()
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                pygame.quit()
+                sys.exit()
+        
+        DISPLAYSURF.blit(BACKGROUND, (0, 0))
+
+        bird.draw()
+
+        pygame.display.update()
+        fpsClock.tick(FPS)
+def update(self):
+    self.y += self.speed + 0.5*G
+    self.speed += G
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    
+    DISPLAYSURF.blit(BACKGROUND, (0, 0))
+
+    bird.draw()
+    bird.update()
+    
+    pygame.display.update()
+    fpsClock.tick(FPS)
