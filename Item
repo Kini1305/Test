@@ -1,0 +1,16 @@
+BIRDWIDTH = 60
+BIRDHEIGHT = 45
+G = 0.5
+SPEEDFLY = -8
+BIRDIMG = pygame.image.load('img/bird.png')
+class Bird():
+    def __init__(self):
+        self.width = BIRDWIDTH
+        self.height = BIRDHEIGHT
+        self.x = (WINDOWWIDTH - self.width)/2
+        self.y = (WINDOWHEIGHT- self.height)/2
+        self.speed = 0
+        self.suface = BIRDIMG
+
+    def draw(self):
+        DISPLAYSURF.blit(self.suface, (int(self.x), int(self.y)))
